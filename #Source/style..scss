@@ -1,0 +1,469 @@
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ :focus,
+ :active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/********************/
+
+body {
+    width: 100%
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Ubuntu&display=swap');
+%list__menu_hover {
+    text-align: center;
+    line-height: calc(30px + (74 - 30) * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    background-color: black;
+    color: silver;
+    text-transform: uppercase;
+    font-family: 'Langar', cursive;
+    width: calc(50px + (250 - 50) * ((100vw - 320px) / (1200 - 320)));
+    background-color: black;
+    height: calc(30px + (74 - 30) * ((100vw - 320px) / (1200 - 320)));
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: wheat;
+        transition: 0.3s;
+    }
+}
+
+%list__calendar_hover {
+    font-size: calc(15px + (35 - 15) * ((100vw - 320px) / (1200 - 320)));
+    color: dodgerblue;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px black;
+    padding-left: 100px;
+    &:hover {
+        color: blue;
+        opacity: 0.8;
+    }
+}
+
+%social_list {
+    height: calc(15px + (30 - 15) * ((100vw - 320px) / (1200 - 320)));
+    display: block;
+    width: calc(15px + (30 - 15) * ((100vw - 320px) / (1200 - 320)));
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.menu {
+    position: relative;
+    overflow: hidden;
+    & .container__menu {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        width: 100%;
+        & .icon {
+            flex: 0 0 auto;
+            padding: 10px;
+            img {
+                width: 70px;
+            }
+        }
+        & .list {
+            display: flex;
+            & ul li {
+                margin: 0px 40px;
+                float: left;
+                display: flex;
+                & a {
+                    @extend %list__menu_hover;
+                }
+            }
+        }
+    }
+    & .login {
+        width: 95px;
+        height: 90px;
+        padding: 10px 15px 10px 10px;
+        & a {
+            position: relative;
+            height: 70px;
+            width: 70px;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.wrapper {
+    background: gray;
+    padding: 0 calc(2px + (50 - 12) * ((100vw - 320px) / (1200 - 320)));
+    .container-1 {
+        padding: 5% calc(5px + (40 - 5) * ((100vw - 320px) / (1200 - 320)));
+        position: relative;
+        margin: 0 auto;
+        background-image: url(../img/fon.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: space-between;
+        & .photos {
+            padding-top: 2%;
+            height: calc(120px + (390 - 120) * ((100vw - 320px) / (1200 - 320)));
+            & .photos__earth {
+                background: url(../img/earth.png) no-repeat;
+                background-size: contain;
+                position: relative;
+                height: calc(100px + (330 - 100) * ((100vw - 320px) / (1200 - 320)));
+                & .photos__satellite {
+                    & .moon {
+                        width: 20%;
+                    }
+                    & .satellite {
+                        width: 20%;
+                        top: 90%;
+                        position: absolute;
+                        left: 20%;
+                        &:hover {
+                            transform: rotate(25deg);
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+        }
+        .big_title {
+            .big_title__title {
+                color: dodgerblue;
+                padding-top: 5%;
+                font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+                text-transform: uppercase;
+                font-family: 'Andika New Basic', sans-serif;
+                line-height: 80%;
+                padding-right: 15%;
+                text-shadow: 2px 2px black;
+                & p {
+                    margin-bottom: 10%;
+                    float: right;
+                    text-transform: none;
+                    font-size: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
+                }
+            }
+        }
+    }
+    .container-2 {
+        padding: 5% calc(5px + (40 - 5) * ((100vw - 320px) / (1200 - 320)));
+        position: relative;
+        margin: 0 auto;
+        background-image: url(../img/mars-fon.jpg);
+        background-size: cover;
+        & .container-2__title {
+            font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+            text-align: center;
+            font-family: 'Bungee Outline', cursive;
+            color: wheat;
+            text-shadow: 3px 3px black;
+            margin-bottom: 70px;
+        }
+        & .list {
+            margin: 0 auto;
+            margin-bottom: 80px;
+            & ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                & .slash {
+                    width: 5%;
+                    opacity: 0.5;
+                }
+                & li {
+                    display: block;
+                    & a {
+                        font-size: calc(15px + (40 - 15) * ((100vw - 320px) / (1200 - 320)));
+                        color: dodgerblue;
+                        text-shadow: 2px 2px black;
+                        font-family: 'Poppins', sans-serif;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        .calendars {
+            .calendars_title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2%;
+                & .calendars_title__title {
+                    margin: 0 0 0 15%;
+                    font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+                    font-family: 'Bungee Outline', cursive;
+                    color: powderblue;
+                    text-shadow: 3px 3px black;
+                    text-transform: uppercase;
+                    padding: 10px;
+                }
+                & .arrow {
+                    opacity: 0.6;
+                    position: relative;
+                    top: -50px;
+                    margin: 0 10% 0 0;
+                    display: flex;
+                    &:hover {
+                        transform: rotate(10deg);
+                        transition: 1s;
+                    }
+                    & .arrow__photo {
+                        background: url(../img/arrow.png) no-repeat;
+                        background-size: contain;
+                        flex: 1 1 auto;
+                        width: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320)));
+                    }
+                    & .arrow__text {
+                        font-size: calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
+                        color: yellow;
+                        font-family: sans-serif;
+                        padding: 5px;
+                        top: 15px;
+                        position: relative;
+                    }
+                }
+            }
+            & .calendars_text {
+                display: flex;
+                & .text__list {
+                    margin: 0 auto;
+                    & ul li {
+                        padding: 20px;
+                        & .calendar__satellite {
+                            background: url(../img/satellite-icon.png) no-repeat;
+                            background-size: contain;
+                            @extend %list__calendar_hover;
+                        }
+                        & .calendar__weather {
+                            background: url(../img/cloudy.png) no-repeat;
+                            background-size: contain;
+                            @extend %list__calendar_hover;
+                        }
+                        & .calendar__planets {
+                            background: url(../img/planet.png) no-repeat;
+                            background-size: contain;
+                            @extend %list__calendar_hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .container-3 {
+        background: url(../img/moon-fon.jpg);
+        background-size: cover;
+        padding: 5% calc(5px + (10 - 5) * ((100vw - 320px) / (1200 - 320)));
+        position: relative;
+        margin: 0 auto;
+        & .container-3__title {
+            font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+            text-align: center;
+            font-family: 'Bungee Outline', cursive;
+            color: wheat;
+            text-shadow: 3px 3px black;
+            margin-bottom: 70px;
+        }
+        & .container-3__columns {
+            display: flex;
+            flex-wrap: wrap;
+            & .columns__column {
+                padding: 5%;
+                width: 50%;
+                & .columns__item {
+                    & .item__row {
+                        display: flex;
+                        width: 110%;
+                        & .item__image {
+                            & img {
+                                width: calc(50px + (190 - 50) * ((100vw - 320px) / (1200 - 320)));
+                                border-radius: 5%;
+                                border: 1px solid gray;
+                            }
+                        }
+                        & .item__body {
+                            padding: 0 2% 0 2%;
+                            & .item__title {
+                                font-family: 'Audiowide', cursive;
+                                font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+                                color: wheat;
+                                text-align: center;
+                                text-shadow: 2px 2px black;
+                                top: -15%;
+                                position: relative;
+                            }
+                            & .item__text {
+                                font-family: 'Ubuntu', sans-serif;
+                                font-size: calc(5px + (15 - 5) * ((100vw - 320px) / (1200 - 320)));
+                                text-shadow: 1px 1px black;
+                                color: wheat;
+                                & p {
+                                    margin-bottom: 4%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: darkgray;
+    padding: 0 calc(2px + (50 - 12) * ((100vw - 320px) / (1200 - 320)));
+    & .content {
+        background-color: black;
+        padding: 3%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & .info {
+            color: wheat;
+            font-size: 18px;
+            & a {
+                color: wheat;
+                font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+                font-family: sans-serif;
+                background: url(../img/info.png) no-repeat;
+                background-size: contain;
+                padding-left: 90%;
+            }
+        }
+        & .content_title {
+            & p {
+                color: wheat;
+                font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1200 - 320)));
+                font-family: sans-serif;
+                opacity: 0.8;
+            }
+        }
+        & .social {
+            width: 13%;
+            & .social_title {
+                text-align: center;
+                color: wheat;
+                font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+                font-family: 'Poppins', sans-serif;
+                text-transform: uppercase;
+                margin-bottom: 7%;
+            }
+            & .social_list {
+                & ul,
+                li {
+                    display: block;
+                    display: flex;
+                    justify-content: space-between;
+                    & .whatsapp {
+                        background: url(../img/whatsapp.png) no-repeat;
+                        background-size: contain;
+                        @extend %social_list;
+                    }
+                    & .instagram {
+                        background: url(../img/instagram.png) no-repeat;
+                        background-size: contain;
+                        @extend %social_list;
+                    }
+                    & .youtube {
+                        background: url(../img/youtube.png) no-repeat;
+                        background-size: contain;
+                        @extend %social_list;
+                    }
+                }
+            }
+        }
+    }
+}
